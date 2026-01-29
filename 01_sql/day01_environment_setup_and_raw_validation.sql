@@ -1,14 +1,14 @@
-/* ============================================================
-   DAY 1: Environment Setup & Raw Data Validation
-   Objective:
-   - Create database
-   - Create table
-   - Load sample raw data
-   - Validate structure & data quality before analysis
-   ============================================================ */
+/*
+Day 1 Summary:
+Problem: No database environment existed and raw data quality was unknown.
+Approach: Created database and table, loaded sample raw data, and validated structure and completeness.
+Key Check: Verified schema, row counts, NULLs, and date range.
+Result: Identified data quality issues requiring cleaning before analysis.
+Next Step: Clean data using WHERE filters and create an analysis-ready table.
+*/
 
 ---------------------------------------------------------------
--- 1. Create database & switch context
+-- Step 1: Create database and switch context
 ---------------------------------------------------------------
 IF NOT EXISTS (SELECT name FROM sys.databases WHERE name = 'analyst_practice')
 BEGIN
@@ -20,14 +20,14 @@ USE analyst_practice;
 GO
 
 ---------------------------------------------------------------
--- 2. Drop table if exists (clean setup)
+-- Step 2: Drop existing raw table if present
 ---------------------------------------------------------------
 IF OBJECT_ID('dbo.customers', 'U') IS NOT NULL
     DROP TABLE dbo.customers;
 GO
 
 ---------------------------------------------------------------
--- 3. Create customers table
+-- Step 3: Create raw customers table
 ---------------------------------------------------------------
 CREATE TABLE dbo.customers (
     id INT PRIMARY KEY,
@@ -39,8 +39,7 @@ CREATE TABLE dbo.customers (
 GO
 
 ---------------------------------------------------------------
--- 4. Insert sample RAW data (intentionally imperfect)
--- Note: city values contain case variations for cleaning practice
+-- Step 4: Insert raw data (intentionally imperfect)
 ---------------------------------------------------------------
 INSERT INTO dbo.customers VALUES
 (101, 'Diana', 29, 'Bangalore', '2024-01-15'),
@@ -51,12 +50,7 @@ INSERT INTO dbo.customers VALUES
 GO
 
 ---------------------------------------------------------------
--- Business Question
--- What data do we have, and can it be trusted before analysis?
----------------------------------------------------------------
-
----------------------------------------------------------------
--- 5. Validate table structure
+-- Step 5: Validate table structure
 ---------------------------------------------------------------
 SELECT
     COLUMN_NAME,
@@ -67,48 +61,48 @@ WHERE TABLE_NAME = 'customers'
 GO
 
 /* Observation:
-   - Primary fields identified: id, signup_date, age, city
-   - age and city are nullable → affects segmentation
-   - signup_date is DATE → safe for time analysis
+- Primary key existed on id
+- age and city allowed NULL values
+- signup_date used correct DATE type
 */
 
 ---------------------------------------------------------------
--- 6. Inspect sample records
+-- Step 6: Inspect raw records
 ---------------------------------------------------------------
 SELECT *
 FROM dbo.customers;
 GO
 
 /* Observation:
-   - Missing ages present
-   - Missing city present
-   - City casing inconsistent
+- Missing values existed in age and city
+- City values were inconsistent in casing
 */
 
 ---------------------------------------------------------------
--- 7. Check null distribution
+-- Step 7: Check NULL distribution
 ---------------------------------------------------------------
 SELECT
-    COUNT(*) AS total_records,
+    COUNT(*) AS total_rows,
     COUNT(age) AS age_not_null,
-    COUNT(city) AS city_not_null
+    COUNT(city) AS city_not_null,
+    COUNT(signup_date) AS signup_not_null
 FROM dbo.customers;
 GO
 
 /* Observation:
-   - Nulls exist in critical fields
-   - Cleaning required before KPI creation
+- Critical fields contained NULLs
+- Cleaning was required before analysis
 */
 
 ---------------------------------------------------------------
--- 8. Check data volume
+-- Step 8: Validate data volume
 ---------------------------------------------------------------
-SELECT COUNT(*) AS total_records
+SELECT COUNT(*) AS total_rows
 FROM dbo.customers;
 GO
 
 ---------------------------------------------------------------
--- 9. Validate date range
+-- Step 9: Validate date range
 ---------------------------------------------------------------
 SELECT
     MIN(signup_date) AS first_signup,
@@ -117,11 +111,15 @@ FROM dbo.customers;
 GO
 
 /* Observation:
-   - Date range continuous
-   - Data usable for trend analysis
+- Date range was continuous
+- Data was usable after cleaning
 */
 
 ---------------------------------------------------------------
 -- Decision
--- Next step: clean data using WHERE filters and standardization
 ---------------------------------------------------------------
+/*
+- Raw table was retained for audit
+- Data cleaning was required
+- Analysis would use a cleaned table
+*/
