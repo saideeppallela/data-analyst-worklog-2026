@@ -4,53 +4,54 @@
   <img src="https://img.icons8.com/color/96/microsoft-sql-server.png" alt="Microsoft SQL Server Logo" width="70"/>
 </p>
 
-This phase documents my structured SQL practice using **Microsoft SQL Server**, focused on solving real-world business data problems and building a strong analytical foundation.
+This phase documents my focused effort to build strong SQL foundations as I prepare for a Data Analyst role.
 
-The goal of this phase was not just learning SQL syntax, but developing the ability to translate business questions into reliable data queries and insights.
-
----
-
-### 🎯 Objectives of This Phase
-
-- Understand relational database structure and table relationships  
-- Clean and standardize raw datasets for analysis  
-- Compute business metrics using aggregations  
-- Join multiple tables to build analytical datasets  
-- Apply subqueries and window functions for deeper insights  
-- Validate data accuracy before reporting  
+Rather than treating SQL as a syntax exercise, I used these 30 days to understand how analysts actually use SQL to explore data, clean inconsistencies, calculate business metrics, and prepare datasets for reporting.
 
 ---
 
-### 🛠 Topics Covered
+### 🎯 What I Focused On Learning
 
-- Data exploration and filtering logic  
-- Conditional transformations using CASE logic  
-- Aggregations for KPI calculations  
-- Handling missing and inconsistent data  
-- Table joins and relationship analysis  
-- Subqueries for dynamic business comparisons  
-- Window functions for ranking, trends, and segmentation  
-- Data validation and sanity checks  
-
----
-
-### 🧠 Why This Phase Matters
-
-SQL is the primary tool analysts use to extract, prepare, and validate data before it reaches dashboards or reporting layers.
-
-This phase reflects the real workflow analysts follow when converting raw database records into structured analytical outputs.
+- Understanding how relational tables connect in real databases  
+- Cleaning and standardizing messy data before analysis  
+- Writing queries that answer business questions, not just return rows  
+- Using aggregations to calculate KPIs and summaries  
+- Joining datasets to create analysis-ready views  
+- Applying subqueries and window functions for deeper insights  
+- Performing sanity checks to validate data accuracy  
 
 ---
 
-### 📅 Outcome
+### 🛠 Skills I Practiced
 
-By completing this phase, I developed the ability to:
+- Filtering and conditional logic  
+- Handling NULLs and inconsistent values  
+- GROUP BY and aggregation patterns  
+- Multi-table joins and relationship checks  
+- Subqueries for dynamic comparisons  
+- Window functions for ranking and trends  
+- Query structuring for readability and reuse  
 
-- Translate business questions into SQL logic  
-- Build structured, reusable query workflows  
-- Validate dataset integrity before analysis  
-- Prepare reporting-ready datasets  
+---
 
-This SQL phase forms the technical foundation for the rest of my **120-Day Data Analyst Worklog**, which continues into Excel, Power BI, and Python.
+### 🧠 Why This Phase Matters for My Goal
+
+SQL is the backbone of most data analyst roles.  
+Before dashboards or visualizations, analysts must be able to extract, clean, and validate data correctly.
+
+This phase represents my effort to move from learning SQL concepts to applying them in analyst-style business scenarios.
+
+---
+
+### 📅 What This Phase Helped Me Build
+
+By completing this phase, I improved my ability to:
+
+- Break down business questions into query logic  
+- Structure queries step-by-step instead of guessing  
+- Validate data before trusting results  
+- Think like an analyst, not just a query writer  
+
+This forms the technical starting point of my **120-Day Data Analyst Worklog**, where I continue strengthening my skills using Excel, Power BI, and Python.
 
 ---
