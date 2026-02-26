@@ -33,14 +33,17 @@ This worklog is designed to:
 
 ## 📊 Progress Tracker
 
-| Phase | Tool | Status |
-|--------|------------|----------------|
-| Phase 1 | SQL Server | 🟢 Active |
-| Phase 2 | Microsoft Excel | ⬜ Planned |
-| Phase 3 | Power BI | ⬜ Planned |
-| Phase 4 | Python | ⬜ Planned |
+**Phase 1 — SQL Server**  
+![Completed](https://img.shields.io/badge/Status-Completed-brightgreen)
 
----
+**Phase 2 — Microsoft Excel**  
+![Active](https://img.shields.io/badge/Status-Active-blue)
+
+**Phase 3 — Power BI**  
+![Planned](https://img.shields.io/badge/Status-Planned-lightgrey)
+
+**Phase 4 — Python**  
+![Planned](https://img.shields.io/badge/Status-Planned-lightgrey)
 
 ## 📅 120-Day Learning Roadmap
 
