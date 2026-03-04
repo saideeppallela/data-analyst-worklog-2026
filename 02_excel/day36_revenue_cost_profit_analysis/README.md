@@ -35,8 +35,8 @@ I’m gradually learning how raw data becomes meaningful business metrics.
 
 ## 📸 Work Snapshots
 
-### Profit Calculations
-![Profit Calculations](day36_profit_calculations.png)
+### Business Calculations
+![Business calculations](Business_calculations.png)
 
 ### Profit Margin
 ![Profit Margin](day36_profit_margin.png)
