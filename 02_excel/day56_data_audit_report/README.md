@@ -34,7 +34,7 @@ The dataset contains sales transaction details:
 
 ---
 
-## 📸 Dataset Preview
+## 📸 Raw Data Errors
 
 ![Raw Data Errors](day56_raw_data_errors.png)
 
