@@ -1,160 +1,163 @@
-# 📊 SQL Ranking Customers by Revenue Using Window Functions (ROW_NUMBER vs RANK vs DENSE_RANK)
+# 📊 SQL Window Functions for Customer Ranking by Region (Top N per Group Analysis)
 
 ---
 
 ## 🚀 Business Scenario
 
-In this project, I am trying to understand how companies identify their top customers across different regions.
+In this project, I am learning how a retail company can identify its highest revenue-generating customers across different regions.
 
-I observed that businesses often need to:
-- Find highest revenue customers
-- Compare performance within regions
-- Handle ties in rankings properly
+I tried to understand how businesses compare customers within categories (like region) instead of globally.
 
-So I practiced solving this using SQL window functions.
-
----
-
-## 🧩 Dataset Overview
-
-I created a simple dataset to simulate real business sales data.
-
-**Table Name:** `sales_data`
-
-| Column Name     | Description                          |
-|-----------------|--------------------------------------|
-| order_id        | Unique order identifier              |
-| region          | Sales region (South, North, West)    |
-| customer_name   | Name of the customer                 |
-| revenue         | Revenue generated from the order     |
+This type of analysis is important when companies want:
+- Top customers per region
+- Regional performance insights
+- Fair comparison within segments
 
 ---
 
-## 📸 Dataset Preview
+## 📂 Dataset Overview
 
-![Dataset Preview](day61_query_execution.png)
+In this project, I worked with a simple sales dataset.
+
+I created and used the following columns:
+
+- order_id → Unique ID for each order  
+- region → Location where the order was placed  
+- customer_name → Name of the customer  
+- revenue → Revenue generated from the order  
+
+This helped me simulate a real business dataset in a simple way.
+
+---
+
+## 💻 Query & Setup Preview
+
+![Query Execution](day61_query_execution.png)
 
 ---
 
 ## 🎯 Analysis Objective
 
-In this project, I tried to answer:
+In this project, I am trying to:
 
-- How to rank customers within each region?
-- How different ranking functions behave when revenue is the same?
-- Which ranking function should be used in different scenarios?
+- Rank customers within each region based on revenue  
+- Understand how ranking changes when multiple customers have the same revenue  
+- Compare behavior of:
+  - ROW_NUMBER()
+  - RANK()
+  - DENSE_RANK()  
 
 ---
 
 ## 🔍 Step-by-Step Analysis Process
 
 1. I first created the database and table  
-2. Inserted sample sales data  
-3. Aggregated total revenue per customer  
-4. Used window functions to rank customers within each region  
-5. Compared results of:
-   - ROW_NUMBER()
-   - RANK()
-   - DENSE_RANK()
+2. I inserted sample sales data  
+3. I grouped data by region and customer  
+4. I calculated total revenue using SUM()  
+5. I used a CTE to organize the aggregated data  
+6. I applied window functions to rank customers within each region  
 
 ---
 
 ## 🧠 SQL Concepts I Practiced
 
-- SQL window functions  
+In this project, I practiced:
+
+- Common Table Expressions (CTE)  
+- GROUP BY and aggregation  
+- Window functions  
 - PARTITION BY  
-- ORDER BY in window functions  
-- ROW_NUMBER()  
-- RANK()  
-- DENSE_RANK()  
-- CTE (Common Table Expression)  
-- Aggregation using SUM()  
+- ORDER BY inside window functions  
 
 ---
 
-## 💡 Query Logic Explanation
+## 🧩 Query Logic Explanation
 
-I tried to break the problem into two steps:
+I tried to break the problem into two parts:
 
-**Step 1: Calculate total revenue per customer**
-- I grouped data by region and customer
-- Then used SUM(revenue)
+### Step 1: Aggregate Revenue
+I calculated total revenue for each customer within each region.
 
-**Step 2: Apply ranking**
-- I used PARTITION BY region to rank inside each region
-- Then sorted by revenue in descending order
+### Step 2: Apply Ranking
 
-This helped me clearly see how rankings change when values are tied.
+Then I used:
+
+- ROW_NUMBER() → Gives unique ranking (no duplicates)  
+- RANK() → Same rank for ties but skips next numbers  
+- DENSE_RANK() → Same rank for ties without skipping numbers  
+
+This helped me clearly see how each function behaves.
 
 ---
 
 ## 📊 Analysis Output
 
-![Output](day61_output_result.png)
+![Output Result](day61_output_result.png)
 
 ---
 
-## 📈 What I Observed
+## 🔍 What I Observed
 
-- ROW_NUMBER() always gives unique ranks (even if revenue is same)
-- RANK() gives same rank but skips numbers after ties
-- DENSE_RANK() gives same rank and does NOT skip numbers
+- Customers with same revenue get:
+  - Different ranks in ROW_NUMBER  
+  - Same ranks in RANK and DENSE_RANK  
 
-This helped me realize that:
-👉 Choosing the right ranking function depends on the business use case
+- RANK skips numbers after ties  
+- DENSE_RANK keeps ranking continuous  
+
+This helped me clearly understand when to use each function.
 
 ---
 
 ## 🏢 Where This Is Used in Real Companies
 
-From what I understood, this type of logic is used in:
+I observed that this pattern is used in:
 
-- Identifying top customers per region
-- Sales performance dashboards
-- Leaderboards (top performers)
-- Customer segmentation
-- Revenue analysis reports
+- Identifying top customers per region  
+- Sales performance dashboards  
+- Leaderboards (top sellers, top users)  
+- Marketing segmentation  
+
+This is a very common **Top N per group SQL problem**.
 
 ---
 
-## 🧠 Skills I Practiced
+## 🛠 Skills I Practiced
 
 - Writing structured SQL queries  
-- Solving SQL interview questions  
-- Understanding ranking logic  
-- Business thinking with data  
-- Breaking problems into steps  
+- Breaking business problems into steps  
+- Using window functions for ranking  
+- Understanding real-world use cases  
 
 ---
 
-## 🛠 Tools Used
+## ⚙️ Tools Used
 
 - Microsoft SQL Server  
 - SQL Server Management Studio (SSMS)  
 
 ---
 
-## 📂 Project Files
+## 📁 Project Files
 
-- `day61_database_table_setup.sql`  
-- `day61_question_solution_window_ranking.sql`  
-- `day61_query_execution.png`  
-- `day61_output_result.png`  
+- day61_database_table_setup.sql  
+- day61_question_solution_window_ranking.sql  
+- day61_query_execution.png  
+- day61_output_result.png  
 
 ---
 
 ## 🧠 My Learning Reflection
 
-In this project, I am learning how to think like a data analyst.
+In this project, I am learning how to think like a data analyst instead of just writing queries.
 
-I tried to:
-- Understand the business problem first  
-- Then write SQL step by step  
-- Compare different approaches  
+I tried to understand:
+- Why ranking is needed in business  
+- How different SQL functions behave  
+- How small logic changes affect output  
 
-This practice helped me feel more confident with SQL window functions.
-
-I also realized that small differences in SQL logic can change business results.
+This helped me realize that SQL is not just syntax — it is about decision-making.
 
 ---
 
@@ -164,7 +167,6 @@ SQL interview questions
 SQL portfolio project  
 SQL window functions  
 Top N per group SQL  
-ROW_NUMBER vs RANK vs DENSE_RANK  
 Data analyst SQL project  
-SQL ranking functions example  
-SQL Server practice project  
+ROW_NUMBER vs RANK vs DENSE_RANK  
+SQL ranking customers by region  
