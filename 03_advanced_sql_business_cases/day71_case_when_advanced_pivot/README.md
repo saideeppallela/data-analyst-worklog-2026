@@ -197,5 +197,3 @@ SQL real world project for beginners
 
 ---
 
-If you want next level:
-👉 I’ll optimize your **GitHub repo title + LinkedIn post (this is where hiring happens)**
