@@ -328,7 +328,7 @@ SQL GitHub Portfolio Project
 If you are a recruiter, analyst, or someone learning SQL, I would love to connect and learn together.
 
 LinkedIn: www.linkedin.com/in/saideep-pallela  
-GitHub: https://github.com/yourusername
+
 
 ---
 
