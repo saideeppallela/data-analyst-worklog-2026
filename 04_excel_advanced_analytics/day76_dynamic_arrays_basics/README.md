@@ -127,20 +127,19 @@ This topic completely changed how I look at Excel.
 
 ## 1️⃣ FILTER Formula Output
 
-![FILTER Result](screenshots/screenshot_filter_sales_above_50000.png)
+![FILTER Result](screenshot_filter_sales_above_50000.png)
 
 ---
 
 ## 2️⃣ SORT Formula Output
 
-![SORT Result](screenshots/screenshot_sort_descending_sales.png)
+![SORT Result](screenshot_sort_descending_sales.png)
 
 ---
 
 ## 3️⃣ UNIQUE + SEQUENCE Formula Output
 
-![UNIQUE and SEQUENCE Result](screenshots/screenshot_unique_and_sequence_results.png)
-
+![UNIQUE and SEQUENCE Result](screenshot_unique_and_sequence_results.png)
 ---
 
 # 📂 Project Folder Structure
