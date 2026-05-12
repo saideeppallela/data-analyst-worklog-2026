@@ -170,18 +170,6 @@ day76_dynamic_arrays_basics/
 
 ---
 
-# 🔄 Next Learning Goal
-
-## Day 77 — XLOOKUP and Advanced Lookup Functions
-
-Next, I will learn:
-- XLOOKUP
-- Exact match lookups
-- Approximate match lookups
-- Error handling
-- Modern replacement for VLOOKUP
-
----
 
 # 🙋 About Me
 
