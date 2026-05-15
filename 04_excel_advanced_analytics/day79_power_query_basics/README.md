@@ -157,7 +157,7 @@ Loaded the transformed dataset back into Excel for reporting and future analysis
 
 ## Final Power Query Workflow Screenshot
 
-![Power Query Workflow](04_power_query_final_cleaned_output_with_applied_steps.png)
+![Power Query Workflow](power_query_final_cleaned_output_with_applied_steps.png)
 
 This screenshot shows:
 - Final cleaned dataset
