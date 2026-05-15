@@ -1,0 +1,31 @@
+OrderID,Product,Region,OrderDate,Sales_Amount,Customer_Name
+ORD1001,  Laptop  ,NORTH,01-05-2026,"1,25,000",Rahul Sharma
+ORD1002,Phone ,NORTH,02-05-2026,"85,000",Priya Verma
+ORD1003, Tablet,NORTH,03-05-2026,"45,000",Amit Kumar
+ORD1004,  Laptop  ,NORTH,04-05-2026,"1,10,000",Sneha Reddy
+ORD1002,Phone ,NORTH,02-05-2026,"85,000",Priya Verma
+ORD1003, Tablet,NORTH,03-05-2026,"45,000",Amit Kumar
+ORD1007,Phone ,NORTH,07-05-2026,"95,000",Kiran Rao
+ORD1008, Tablet,NORTH,08-05-2026,"55,000",Meena Patel
+ORD1009,  Laptop  ,north,09-05-2026,"1,35,000",Rohit Singh
+ORD1010,Phone ,north,10-05-2026,"78,000",Anjali Das
+ORD1011, Tablet,north,11-05-2026,"60,000",Vikas Jain
+ORD1012,  Laptop  ,north,12-05-2026,"1,42,000",Pooja Nair
+ORD1013,Phone ,north,13-05-2026,"88,000",Harish Kumar
+ORD1014, Tablet,north,14-05-2026,"50,000",Divya Shah
+ORD1015,  Laptop  ,north,15-05-2026,"1,28,000",Sandeep Roy
+ORD1016,Phone ,North,16-May-26,"92,000",Neha Joshi
+ORD1017, Tablet,North,17-May-26,"48,000",Arun Mehta
+ORD1018,  Laptop  ,North,18-May-26,"1,50,000",Kavya Iyer
+ORD1019,Phone ,North,19-May-26,"81,000",Manoj Yadav
+ORD1020, Tablet,North,20-May-26,"57,000",Ritika Sen
+ORD1021,  Laptop  ,North,21-May-26,"1,32,000",Ajay Kapoor
+ORD1022,Phone ,North,22-May-26,"90,000",Shalini Rao
+ORD1023, Tablet,SOUTH,23-May-26,"62,000",Deepak Verma
+ORD1024,  Laptop  ,south,24-May-26,"1,48,000",Komal Jain
+ORD1025,Phone ,SOUTH,25-May-26,"84,000",Tarun Gill
+ORD1026, Tablet,south,26-May-26,"53,000",Nisha Arora
+ORD1027,  Laptop  ,SOUTH,27-May-26,"1,38,000",Ravi Teja
+ORD1028,Phone ,,28-May-26,"89,000",Asha Menon
+ORD1029, Tablet,,29-May-26,"58,000",Gaurav Mishra
+ORD1030,  Laptop  ,,30-May-26,"1,44,000",Ishita Paul
