@@ -169,16 +169,19 @@ During this exercise, I improved my understanding of:
 
 # 📸 Screenshots
 
-## Final Transformation
+## 🔹 Final Transformation
 
-`screenshots/final_query.png`
+The final Power Query output after merging datasets, appending transactions, creating custom columns (Revenue & Profit), and extracting Month Name.
+
+![Final Power Query Transformation](final_query.png)
 
 ---
 
-## Summary Tables
+## 🔹 Summary Tables
 
-`screenshots/summary_queries.png`
+Category-wise Revenue Summary and Customer-wise Transaction Count generated using Group By in Power Query.
 
+![Summary Tables](summary_queries.png)
 ---
 
 # 📁 Repository Structure
