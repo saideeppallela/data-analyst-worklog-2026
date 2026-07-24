@@ -1,6 +1,5 @@
 # 📊 Phase 4 — Advanced Excel Analytics
-## Day 76–83 | May 12–20, 2026
-
+## Day 76–83 | 
 Building real analyst-level Excel skills
 for Data Analyst interviews.
 
@@ -12,5 +11,4 @@ for Data Analyst interviews.
 - Final Business Report (Portfolio)
 
 *Tool:* Microsoft Excel 365
-*Course:* Chandoo Excel for Data Analysts
-*Status:* 🔄 In Progress
+L
