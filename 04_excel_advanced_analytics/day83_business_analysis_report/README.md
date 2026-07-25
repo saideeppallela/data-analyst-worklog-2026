@@ -90,17 +90,23 @@ The primary objective of this project is to analyze business performance and ans
 
 # 📸 Project Screenshots
 
+# 📸 Project Screenshots
+
 ## Dashboard
 
-![Dashboard](screenshots/01_dashboard.png)
+![Dashboard](01_dashboard.png)
+
+---
 
 ## Analysis
 
-![Analysis](screenshots/02_analysis.png)
+![Analysis](02_analysis.png)
+
+---
 
 ## Findings
 
-![Findings](screenshots/03_findings.png)
+![Findings](03_findings.png)
 
 ---
 
