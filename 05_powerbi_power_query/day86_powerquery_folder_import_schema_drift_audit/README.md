@@ -98,11 +98,10 @@ Validate Missing Regional Files
 
 ---
 
-# 📸 Project Screenshot
+## 📸 Project Screenshot
 
-## Audit Query Validation
+### Audit Query Validation
 
-```markdown
 ![Audit Query Validation](01_audit_query_validation.png)
 ```
 
