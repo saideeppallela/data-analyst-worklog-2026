@@ -4,7 +4,9 @@
 
 This project is part of my **120 Days Data Analyst GitHub Worklog**, where I consistently practice solving realistic business problems to strengthen practical Data Analytics skills.
 
-Today's project focused on building a **reusable Power Query pipeline** using **Parameters**, allowing the same transformation logic to serve multiple regional managers without maintaining separate Power BI reports. The objective was to understand how enterprise BI teams design scalable and maintainable ETL processes.
+In today's project, I built a **reusable Power Query pipeline** using **Parameters**. Instead of creating multiple Power BI reports for different regional managers, I created a single parameter-driven ETL pipeline capable of dynamically filtering data for different business users.
+
+This hands-on project helped me understand how enterprise BI teams design scalable, maintainable, and reusable Power BI solutions while improving my practical Power Query and ETL development skills.
 
 ---
 
@@ -12,9 +14,9 @@ Today's project focused on building a **reusable Power Query pipeline** using **
 
 A company has five regional managers (North, South, East, West, and Central), each requiring the same cleaned transaction report filtered for their respective region.
 
-Maintaining five separate Power BI reports creates unnecessary maintenance effort because every future change to the data preparation logic must be repeated across all reports.
+Maintaining five separate Power BI reports increases maintenance effort because every future change to the data preparation logic must be repeated across all reports.
 
-The business requires a reusable solution that applies identical transformation logic while dynamically filtering data for different regions.
+The business requires one reusable solution that applies identical transformation logic while dynamically filtering data for different regions.
 
 ---
 
@@ -22,18 +24,18 @@ The business requires a reusable solution that applies identical transformation 
 
 - To build one reusable Power Query pipeline.
 - To eliminate hardcoded region filters.
-- To use Power Query Parameters for dynamic filtering.
-- To understand how scalable ETL pipelines are implemented in enterprise BI projects.
+- To implement dynamic filtering using Power Query Parameters.
+- To understand how enterprise BI teams create scalable ETL solutions.
 
 ---
 
 # 🏢 Business Scenario
 
-A national bank provides transaction reports to multiple regional managers.
+A national bank distributes transaction reports to multiple regional managers.
 
-Each manager requires the same report structure, business rules, and data cleansing process. The only difference is the region being analyzed.
+Every manager requires the same business rules, transformations, and report structure. The only difference is the business region.
 
-Instead of maintaining multiple Power BI files, a single reusable pipeline dynamically filters the required region through a Power Query Parameter, improving maintainability and reducing duplicate development effort.
+Instead of maintaining multiple Power BI files, one reusable Power Query pipeline dynamically filters the required region using a parameter, reducing maintenance effort and improving report scalability.
 
 ---
 
@@ -45,39 +47,38 @@ Bank Transaction Dataset (Practice Dataset)
 
 ### Files
 
-- day88_transactions_parameter_practice.xlsx
+- `day88_transactions_parameter_practice.xlsx`
 
 ### Total Records
 
-Approximately **5,000+ transaction records**
+- Approximately **5,000+** transaction records
 
 ### Dataset Highlights
 
-- Multiple business regions
-- Transaction information
+- Transaction details
 - Customer information
+- Regional data
 - Card categories
 - Expense categories
 - Approval status
-- Mixed data quality issues
 - Duplicate records
 - Blank values
-- Inconsistent region formatting
-- Mixed date formats for future practice
+- Inconsistent Region formatting
+- Mixed date formats (for future Power Query practice)
 
 ---
 
 # 🛠️ Activities Performed
 
-The project began by importing the transaction dataset into Power Query to inspect its overall data quality before loading it into the data model.
+During this project, I worked through a practical business scenario focused on building a reusable Power Query pipeline.
 
-The Region column was standardized by removing unnecessary spaces and normalizing text formatting to ensure consistent business values across the dataset.
+I began by importing a bank transaction dataset into Power Query and inspecting its overall data quality before applying transformations. This helped me understand how inconsistent values and formatting issues can affect business reporting.
 
-A reusable **Power Query Parameter** named **RegionParameter** was created with predefined regional values. Instead of applying a fixed region filter, the parameter was integrated directly into the M query so that the filtering logic became dynamic.
+Next, I standardized the **Region** column by removing unnecessary spaces and applying consistent text formatting. This ensured that business filters would behave consistently across different reports.
 
-The pipeline was validated by changing the parameter value from **North** to **South** without modifying any transformation logic. The same query successfully returned different regional datasets, demonstrating how one ETL pipeline can support multiple reporting requirements.
+I then created a **Power Query Parameter** named **RegionParameter** containing predefined business regions. Instead of applying a fixed Region filter, I connected the parameter directly to the M Query so the same transformation logic could dynamically return different regional datasets.
 
-This approach reflected how enterprise BI teams reduce maintenance effort while improving scalability.
+Finally, I validated the solution by changing the parameter value from **North** to **South** without modifying any transformation logic. This demonstrated how one reusable ETL pipeline can support multiple business users while reducing maintenance effort.
 
 ---
 
@@ -93,7 +94,7 @@ Import Dataset
 Inspect Data Quality
         │
         ▼
-Clean Region Values
+Standardize Region Values
         │
         ▼
 Create Region Parameter
@@ -105,10 +106,10 @@ Apply Parameter in M Query
 Dynamic Region Filtering
         │
         ▼
-Validate Pipeline Reusability
+Validate Reusable Pipeline
         │
         ▼
-Reusable Enterprise Power Query Solution
+Reusable Enterprise Reporting Solution
 ```
 
 ---
@@ -119,15 +120,13 @@ Reusable Enterprise Power Query Solution
 
 **Filename**
 
-```text
-01_parameterized_region_filter.png
-```
+`01_parameterized_region_filter.png`
 
-```markdown
 ![Parameterized Region Filter](01_parameterized_region_filter.png)
-```
 
-This screenshot showed the reusable Power Query pipeline filtering transaction data using the **North** region parameter.
+**Description**
+
+This screenshot shows the reusable Power Query pipeline after applying the **RegionParameter** with the value **North**. The query dynamically filtered transaction data without using a hardcoded region.
 
 ---
 
@@ -135,40 +134,54 @@ This screenshot showed the reusable Power Query pipeline filtering transaction d
 
 **Filename**
 
-```text
-02_parameter_changed_to_south.png
-```
+`02_parameter_changed_to_south.png`
 
-```markdown
 ![Parameter Validation](02_parameter_changed_to_south.png)
-```
 
-This screenshot demonstrated that changing only the parameter value automatically refreshed the query to display **South** region transactions without modifying any transformation logic.
+**Description**
+
+This screenshot validates the reusable pipeline by changing the parameter value from **North** to **South**. Without modifying any transformation logic, the query automatically returned South region transactions.
+
+---
+
+## 3️⃣ Final Reusable Pipeline
+
+**Filename**
+
+`03_final_reusable_pipeline.png`
+
+![Final Reusable Pipeline](03_final_reusable_pipeline.png)
+
+**Description**
+
+This screenshot presents the completed reusable Power Query pipeline, including the parameter, transformation steps, and parameter-driven M Query that supports multiple regional reporting requirements.
 
 ---
 
 # 💼 Business Outcome
 
-A single reusable Power Query pipeline was successfully created to support multiple regional reporting requirements.
+A single reusable Power Query pipeline successfully supported multiple regional reporting requirements.
 
-The solution eliminated hardcoded filters and demonstrated how parameter-driven ETL processes reduce maintenance effort while improving scalability and consistency across reports.
+The solution eliminated hardcoded filters and demonstrated how parameter-driven ETL processes improve maintainability, consistency, and scalability in enterprise Power BI projects.
 
 ---
 
 # 🎓 Key Learning
 
 - Understood the business purpose of Power Query Parameters.
-- Built a reusable ETL pipeline instead of multiple report versions.
-- Connected business requirements with scalable Power BI development.
-- Applied parameter-driven filtering through M Query.
-- Validated dynamic filtering without changing transformation logic.
-- Practiced enterprise-style Power Query development.
+- Practiced building a reusable Power Query pipeline.
+- Connected a Power Query Parameter with an M Query filter.
+- Learned how dynamic filtering supports scalable reporting solutions.
+- Improved practical understanding of reusable ETL development.
+- Strengthened Power Query transformation and parameterization skills.
 
 ---
 
 # 📈 Project Summary
 
-This project demonstrated how Power Query Parameters can transform a fixed ETL process into a reusable enterprise solution. Instead of maintaining separate Power BI files for different business users, a single parameterized pipeline dynamically filtered transaction data for different regions, improving maintainability and scalability.
+This project focused on solving a common enterprise reporting challenge where multiple regional managers required identical reports with different regional data.
+
+By building a reusable Power Query pipeline using Parameters, I practiced designing a scalable ETL solution that dynamically filters transaction data without duplicating transformation logic. This project strengthened my practical understanding of reusable Power BI development and enterprise data preparation techniques.
 
 ---
 
@@ -196,18 +209,19 @@ day88_reusable_regional_pipeline/
 ├── Day88_Reusable_Regional_Report_Parameters.pbix
 ├── day88_transactions_parameter_practice.xlsx
 ├── 01_parameterized_region_filter.png
-└── 02_parameter_changed_to_south.png
+├── 02_parameter_changed_to_south.png
+└── 03_final_reusable_pipeline.png
 ```
 
 ---
 
 # 📅 120 Days Data Analyst GitHub Worklog
 
-**Progress**
+### Progress
 
-Day 88 / 120 Completed ✅
+**Day 88 / 120 Completed ✅**
 
-**Current Focus**
+### Current Focus
 
 Enterprise Power Query Development and Reusable ETL Pipeline Design
 
@@ -215,9 +229,9 @@ Enterprise Power Query Development and Reusable ETL Pipeline Design
 
 # 👨‍💻 About Me
 
-I am currently pursuing an **MBA in Business Analytics & Data Science** and preparing for a Data Analyst career by building practical portfolio projects based on real business scenarios.
+I am currently pursuing an **MBA in Business Analytics & Data Science** and continuously building practical Data Analytics skills through hands-on business projects.
 
-My learning journey focuses on:
+My learning journey focuses on applying real-world problem-solving using:
 
 - Microsoft Excel
 - SQL Server
@@ -226,17 +240,17 @@ My learning journey focuses on:
 - Statistics
 - Business Analytics
 
-Each project strengthens practical problem-solving skills while preparing for Data Analyst interviews.
+Each project in this repository represents a practical exercise completed to improve my technical knowledge and build a strong Data Analytics portfolio.
 
 ---
 
 # 🤝 Connect With Me
 
-**LinkedIn**
+### LinkedIn
 
 https://www.linkedin.com/in/saideep-pallela
 
-**GitHub**
+### GitHub
 
 https://github.com/saideeppallela
 
@@ -244,6 +258,6 @@ https://github.com/saideeppallela
 
 # ⭐ Thank You
 
-Thank you for visiting my project.
+Thank you for visiting my Day 88 project.
 
-If you found this repository helpful, please consider giving it a ⭐ to support my learning journey and help others discover these practical Data Analytics projects.
+If you found this repository helpful, please consider giving it a ⭐. Your support motivates me to continue documenting my **120 Days Data Analyst GitHub Worklog** and sharing practical Data Analytics projects.
