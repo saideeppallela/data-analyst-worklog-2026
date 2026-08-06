@@ -98,11 +98,9 @@ Semantic Model Ready for DAX & Reporting
 
 **File:** `screenshot_model_view.png`
 
-```markdown
 ![Star Schema Model](./screenshot_model_view.png)
-```
 
-Shows the completed Star Schema with the Fact Table at the center and all Dimension Tables connected using one-to-many relationships.
+Shows the completed Star Schema with the **Fact Table** at the center and the **Dimension Tables** connected using one-to-many relationships.
 
 ---
 
@@ -110,11 +108,9 @@ Shows the completed Star Schema with the Fact Table at the center and all Dimens
 
 **File:** `screenshot_relationship_properties.png`
 
-```markdown
 ![Relationship Configuration](./screenshot_relationship_properties.png)
-```
 
-Shows the relationship configuration including active status, cardinality, and Single cross filter direction.
+Shows the relationship configuration, including the active relationship, **Many-to-One (*:1)** cardinality from the Fact table perspective, and **Single** cross-filter direction.
 
 ---
 
@@ -122,12 +118,11 @@ Shows the relationship configuration including active status, cardinality, and S
 
 **File:** `screenshot_data_view.png`
 
-```markdown
 ![Fact Table Structure](./screenshot_data_view.png)
-```
 
-Shows the transaction-level Fact Table containing transaction IDs, foreign keys, transaction date, and transaction amount.
+Shows the transaction-level Fact Table containing the transaction ID, foreign keys, transaction date, and transaction amount used for business analysis.
 
+---
 ---
 
 # 💼 Business Outcome
