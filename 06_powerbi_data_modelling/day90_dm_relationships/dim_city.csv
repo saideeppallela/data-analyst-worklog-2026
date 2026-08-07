@@ -1,0 +1,9 @@
+city_id,city,region,population_tier
+101,Hyderabad,South,Tier-1
+102,Bengaluru,South,Tier-1
+103,Mumbai,West,Tier-1
+104,Delhi,North,Tier-1
+105,Chennai,South,Tier-1
+106,Pune,West,Tier-2
+107,Visakhapatnam,South,Tier-2
+108,Kolkata,East,Tier-1
